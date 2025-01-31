@@ -1,30 +1,48 @@
-
 import java.awt.Color;
-
+ 
 public class Property {
-    
-    //TODO fix
+ 
+    Color color;
+    String name;
+    Player owner;
+    int rent;
+    int houseCost;
+    String type;
+    int setSize;
+ 
+    int numHouses;
+ 
+    public Property(Color c, String n, int r, int hc, String t, int s){
+        color = c;
+        name = n;
+        rent = r;
+        houseCost = hc;
+        type = t;
+        numHouses = 0;
+        owner = null;
+        setSize = s;
+        houseCost = hc;
+    }
+ 
     public Color getColor(){
-        return new Color(255, 0, 0);
+        return color;
     }
-
-    //TODO fix
+ 
     public String getName(){
-        return "nothing";
+        return name;
     }
-
-    //TODO fix
+ 
     public int getNumHouses(){
-        return 5;
+        return numHouses;
     }
-
-    //TODO fix
-    public String getOwner(){
-        return "no one";
+ 
+    public Player getOwner(){
+        return owner;
     }
-
-    //TODO fix
+ 
     public int getRent(){
-        return 20;
+ 
+        
+        return rent;
     }
 }
