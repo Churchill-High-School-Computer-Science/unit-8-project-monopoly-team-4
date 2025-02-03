@@ -31,32 +31,9 @@ public class Player {
     public int getLocation(){
         return location;
     }
-    public class Player2 {
-        int money = 5000;
-        String name;
-        int location = 0;
-        ArrayList<Property> property = new ArrayList<>();
-        public Player2(String n){
-            name = n;
-        }
-        public String getName(){
-            return name;
-        }
-        public int getMoney(){
-            return money;
-        }
-        public int getLocation(){
-            return location;
-        }
-        public ArrayList<Property> getProperties(){
-            return property;
-        }
-
-
-
-
+   
 
 
 
     }
-}
+

@@ -5,7 +5,15 @@ public class Monopoly {
  
         Board b = new Board();
         Player player1 = new Player("Jimmy");
+        Player player2 = new Player("Joseph");
+        Player player3 = new Player("Carlos");
+        Player player4 = new Player("Grace");
         Display.players.add(player1);
+        Display.players.add(player2);
+        Display.players.add(player3);
+        Display.players.add(player4);
+
+
  
         //Graphics!
         SwingUtilities.invokeLater(() -> Display.setupFrame());
