@@ -12,10 +12,17 @@ public class Monopoly {
         Display.players.add(player2);
         Display.players.add(player3);
         Display.players.add(player4);
-
-
+        
  
         //Graphics!
         SwingUtilities.invokeLater(() -> Display.setupFrame());
+        player1.getDice();
+        player1.moveLocation();
+        player2.getDice();
+        player2.moveLocation();
+        player3.getDice();
+        player3.moveLocation();
+        player4.getDice();
+        player4.moveLocation();
     }
 }
