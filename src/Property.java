@@ -3,12 +3,12 @@ import java.awt.Color;
 public class Property {
  
     Color color;
-    String name;
+    String name = "Short-Line";
     Player owner;
-    int rent;
-    int houseCost;
-    String type;
-    int setSize;
+    int rent = 10;
+    int houseCost = 100;
+    String type = "Railroads";
+    int setSize = 1000;
  
     int numHouses;
  

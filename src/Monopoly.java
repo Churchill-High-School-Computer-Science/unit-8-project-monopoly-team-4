@@ -16,13 +16,16 @@ public class Monopoly {
  
         //Graphics!
         SwingUtilities.invokeLater(() -> Display.setupFrame());
-        player1.getDice();
-        player1.moveLocation();
-        player2.getDice();
-        player2.moveLocation();
-        player3.getDice();
-        player3.moveLocation();
-        player4.getDice();
-        player4.moveLocation();
+        while (true){
+            player1.getDice();
+            player1.moveLocation();
+            player2.getDice();
+            player2.moveLocation();
+            player3.getDice();
+            player3.moveLocation();
+            player4.getDice();
+            player4.moveLocation();
+        }
+        
     }
 }

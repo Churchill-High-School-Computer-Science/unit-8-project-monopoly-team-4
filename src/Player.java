@@ -9,7 +9,7 @@ public class Player {
    String name;
    ArrayList<Property> property = new ArrayList<>();
    int randomNum = (int)(Math.random() * 10);
-   int randmMod = randomNum % 40;
+   int randomMod;
    public Player(String n){
     name = n;
    }
@@ -38,9 +38,10 @@ public class Player {
          Display.inform("It is " + getName() + "'s turn! \n " + getName() + " rolled " + randomNum + "!");
     }
     public void moveLocation(){
-        location = randomNum;
+        location += randomNum;
         int movLoc = location;
         Display.inform(getName() + " moves to slot " + movLoc + "!");
+        Display.boardPanel.repaint();
     }
    
 
