@@ -43,6 +43,9 @@ public class Player {
         Display.inform(getName() + " moves to slot " + movLoc + "!");
         Display.boardPanel.repaint();
     }
+    public void getProperty(){
+        
+    }
    
 
 

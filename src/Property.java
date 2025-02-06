@@ -3,16 +3,18 @@ import java.awt.Color;
 public class Property {
  
     Color color;
-    String name = "Short-Line";
+    String name;
     Player owner;
-    int rent = 10;
-    int houseCost = 100;
-    String type = "Railroads";
-    int setSize = 1000;
+    int rent;
+    int houseCost;
+    String type;
+    int setSize;
  
     int numHouses;
+    boolean ownable;
+    boolean alreadyBought;
  
-    public Property(Color c, String n, int r, int hc, String t, int s){
+    public Property(Color c, String n, int r, int hc, String t, int s, boolean o){
         color = c;
         name = n;
         rent = r;
@@ -22,6 +24,8 @@ public class Property {
         owner = null;
         setSize = s;
         houseCost = hc;
+        ownable = o;
+        alreadyBought = false;
     }
  
     public Color getColor(){
