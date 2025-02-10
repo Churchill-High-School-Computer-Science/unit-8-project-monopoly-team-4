@@ -19,12 +19,17 @@ public class Monopoly {
         while (true){
             player1.getDice();
             player1.moveLocation();
+            player1.getProperty();
             player2.getDice();
             player2.moveLocation();
+            player2.getProperty();
             player3.getDice();
             player3.moveLocation();
+            player3.getProperty();
             player4.getDice();
             player4.moveLocation();
+            player4.getProperty();
+            
         }
         
     }

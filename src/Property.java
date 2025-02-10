@@ -11,8 +11,8 @@ public class Property {
     int setSize;
  
     int numHouses;
-    boolean ownable;
-    boolean alreadyBought;
+   public boolean ownable;
+   public boolean alreadyBought;
  
     public Property(Color c, String n, int r, int hc, String t, int s, boolean o){
         color = c;

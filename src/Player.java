@@ -44,11 +44,23 @@ public class Player {
         Display.boardPanel.repaint();
     }
     public void getProperty(){
+         Property temp =  Board.propertiesMap.get(location);
+
+         if (temp > money){
+            Display.inform("You are not able to buy this property.");
+         }
+         if (temp.equals(alreadyBought)){
+            Display.inform("This property you cannot buy. Someone already owns it.");
+         }
+         if (temp.equals(ownable) && money >= temp){
+            Display.inform("This property is up for sale. Buy or pass or rent?");
+         }
+         }
         
     }
    
 
 
 
-    }
+    
 
