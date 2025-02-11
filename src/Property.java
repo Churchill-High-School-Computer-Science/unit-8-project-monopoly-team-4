@@ -6,10 +6,10 @@ public class Property {
     String name;
     Player owner;
     int rent;
-    int houseCost;
+  public  int houseCost;
     String type;
     int setSize;
- 
+    int cost;
     int numHouses;
    public boolean ownable;
    public boolean alreadyBought;

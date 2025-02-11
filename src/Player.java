@@ -10,6 +10,7 @@ public class Player {
    ArrayList<Property> property = new ArrayList<>();
    int randomNum = (int)(Math.random() * 10);
    int randomMod;
+   
    public Player(String n){
     name = n;
    }
@@ -28,7 +29,7 @@ public class Player {
     public ArrayList<Property> getProperties(){
         return property;
     }
-
+    
     //TODO FIX
     //Go is the top left corner, location 0. Locations increase by 1 for each property that the player passes clockwise.
     public int getLocation(){
@@ -45,8 +46,9 @@ public class Player {
     }
     public void getProperty(){
          Property temp =  Board.propertiesMap.get(location);
+         Property hc = new Property(null, name, randomMod, money, name, location, false);
 
-         if (temp > money){
+         if (houseCost > money){
             Display.inform("You are not able to buy this property.");
          }
          if (temp.equals(alreadyBought)){
