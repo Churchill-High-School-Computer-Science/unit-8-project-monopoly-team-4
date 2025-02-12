@@ -46,17 +46,38 @@ public class Player {
     }
     public void getProperty(){
          Property temp =  Board.propertiesMap.get(location);
-         Property hc = new Property(null, name, randomMod, money, name, location, false);
+        
 
-         if (houseCost > money){
+         if (temp.cost > money){
             Display.inform("You are not able to buy this property.");
          }
-         if (temp.equals(alreadyBought)){
+         if (temp.alreadyBought == true){
             Display.inform("This property you cannot buy. Someone already owns it.");
          }
-         if (temp.equals(ownable) && money >= temp){
-            Display.inform("This property is up for sale. Buy or pass or rent?");
+         if ((temp.ownable == true) && (money >= temp.cost)){
+           int choice = Display.choice("Buy?","This property is up for sale. Buy or pass or rent?",new String[]{"Rent","Pass","Buy"});
+            if (choice == 0){
+                Display.inform("You are now renting this property");
+                money -= temp.rent;
+            }
+            if (choice == 1){
+                Display.inform("Passing this property");
+            }
+            if (choice == 2){
+                Display.inform("Buying this property. You are now able to buy houses. However only up to 5. ");
+                property.add(temp);
+                money -= temp.cost;
+                Display.choice("Buy Houses?","How many houses would you like to buy",new String[]{"1","2","3","4"});
+                if (choice == 1){
+                    money -= temp.cost;
+                }
+            }
+            
          }
+         public void getHouse(){
+            
+         }
+
          }
         
     }
