@@ -67,16 +67,24 @@ public class Player {
                 Display.inform("Buying this property. You are now able to buy houses. However only up to 5. ");
                 property.add(temp);
                 money -= temp.cost;
-                Display.choice("Buy Houses?","How many houses would you like to buy",new String[]{"1","2","3","4"});
-                if (choice == 1){
-                    money -= temp.cost;
+             int numHouses = Display.choice("Buy Houses?","How many houses would you like to buy",new String[]{"1","2","3","4"});
+                if (numHouses == 0){
+                    money -= temp.houseCost;
                 }
+                if (numHouses == 1){
+                    money -= temp.houseCost * 2;
+                }
+                if (numHouses == 2){
+                    money -= temp.houseCost * 3;
+                }
+                if (numHouses == 3){
+                    money -= temp.houseCost * 4;
+                }
+                
             }
             
          }
-         public void getHouse(){
-            
-         }
+         
 
          }
         
